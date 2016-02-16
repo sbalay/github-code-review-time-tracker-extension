@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Github code review time tracker extension",
+  "description": "Shows a pop up with the spent time review a pull request",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["myjs.js"]
+    }
+  ]
+}
